@@ -16,4 +16,3 @@ function inverseArray(arr) {
     return arr;
 }
 
-
