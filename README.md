@@ -1,0 +1,1 @@
+Just a bunch of basic javascript exercises.
