@@ -3,7 +3,7 @@ function gcd(a, b) {
      while (a != 0 && b != 0){
 	 if( a > b) { 
 	 a = a % b 
-	 } else ( b > a ){
+	 } else {
 		 b = b % a 
 }
 	 return a || b ;
@@ -11,16 +11,16 @@ function gcd(a, b) {
 }
 
 // exercises #2, implement algorithms finding least common multiple (LCM)
-function lcm(a, b) {
-     for (let j = a; ; j++){
-		if (a%b == 0) continue;
-	 return Math.min(j);
-	 }
+function lcm(a, b) { 
+     return a * b / gcd(a, b)
 }
 
 // exercises #3, inverse given array
 function inverseArray(arr) {
-    
+    for( let i = 0; i < arr.length / 2 ; i++) {
+       let b = arr[i]; 
+       arr[i] = arr[arr.length - 1 - i]; 
+       arr[arr.length -1 - i] = b;
+    }
     return arr;
 }
-
